@@ -8,6 +8,13 @@
       menuBtn.setAttribute('aria-expanded', String(!open));
       nav.setAttribute('data-open', String(!open));
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+        menuBtn.setAttribute('aria-expanded', 'false');
+        nav.setAttribute('data-open', 'false');
+        menuBtn.focus();
+      }
+    });
     nav.addEventListener('click', function (e) {
       if (e.target.closest('a')) {
         menuBtn.setAttribute('aria-expanded', 'false');

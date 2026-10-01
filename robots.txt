@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://melinamartini.github.io/sitemap.xml

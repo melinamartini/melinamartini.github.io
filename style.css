@@ -430,3 +430,16 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 /* Modalidades: textos a la misma altura */
 @media (min-width: 761px) { .mode { grid-row: span 3; grid-template-rows: subgrid; row-gap: 10px; } .mode h3 { align-self: start; } }
 .madzen-head p { max-width: none; }
+
+/* ===== QA v1 (responsive + táctil) ===== */
+/* Descendentes de la cursiva por encima del resaltado amarillo del título */
+.h1 .it { position: relative; z-index: 1; }
+/* Áreas táctiles mínimas */
+.copy { min-height: 44px; }
+.link-arrow { display: inline-block; padding-block: 8px; }
+/* Pantallas angostas (≤380px): títulos largos y sello de la foto sin desbordar */
+@media (max-width: 380px) {
+  .h2 { font-size: 31px; }
+  .seal { right: -6px; top: -12px; width: 84px; height: 84px; }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
